@@ -1,93 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Tip Calculator</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <div class="container">
-      <div class="logo">
-        <img src="./images/logo.svg" alt="logo" />
-      </div>
-      <div class="group">
-        <div class="form">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tip Calculator</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div class="container">
+    <div class="logo">
+      <img src="./images/logo.svg" alt="logo" />
+    </div>
+    <div class="group">
+      <div class="form">
         <form class="form">
-            <div class="bill-amount">
-              <label for="bill">Bill Amount</label>
-              <img src="./images/icon-dollar.svg" alt="icon-dollar" />
-              <input type="text" id="bill" name="bill" placeholder="$0.00" />
+          <div class="bill-amount logo">
+            <label for="bill">Bill Amount</label>
+            <img src="./images/icon-dollar.svg" alt="icon-dollar" class="icon-logo" />
+            <input type="number" id="bill" name="bill" placeholder="0.00" />
+          </div>
+          <div class="tip">
+            <label>Select Tip %</label>
+          </div>
+          <div class="buttons-wrapper">
+            <div class="button-wrapper">
+              <input type="radio" value="5" id="5" name="tip" />
+              <label for="5"><span>5%</span></label>
             </div>
-            <div class="tip">
-              <label>Select Tip %</label>
+            <div class="button-wrapper">
+              <input type="radio" value="10" id="10" name="tip" />
+              <label for="10"><span>10%</span></label>
             </div>
-            <div class="buttons-wrapper">
-              <div class="button-wrapper">
-                <input type="radio" value="5" id="5" name="tip" />
-                <label for="5"><span>5%</span></label>
-              </div>
-              <div class="button-wrapper">
-                <input type="radio" value="10" id="10" name="tip" />
-                <label for="10"><span>10%</span></label>
-              </div>
-              <div class="button-wrapper">
-                <input type="radio" value="15" id="15" name="tip" />
-                <label for="15"><span>15%</span></label>
-              </div>
-              <div class="button-wrapper">
-                <input type="radio" value="20" id="20" name="tip" />
-                <label for="20"><span>20%</span></label>
-              </div>
-              <div class="button-wrapper">
-                <input type="radio" value="50" id="50" name="tip" />
-                <label for="50"><span>50%</span></label>
-              </div>
-              <div class="button-wrapper button-wrapper-custom">
-                <label for="custom"><span>Custom</span> </label>
-                <input
-                  type="number"
-                  name="customTip"
-                  value="0"
-                  class="custom-tip"
-                  id="customTip"
-                />
-              </div>
+            <div class="button-wrapper">
+              <input type="radio" value="15" id="15" name="tip" />
+              <label for="15"><span>15%</span></label>
             </div>
-            <div class="numberPeoples">
-              Number of people:
-              <img src="./images/icon-person.svg" alt="icon-person" />
-              <input type="text" name="" />
+            <div class="button-wrapper">
+              <input type="radio" value="20" id="20" name="tip" />
+              <label for="20"><span>20%</span></label>
             </div>
+            <div class="button-wrapper">
+              <input type="radio" value="50" id="50" name="tip" />
+              <label for="50"><span>50%</span></label>
+            </div>
+            <div class="button-wrapper button-wrapper-custom">
+              <input type="radio" value="custom" id="custom" name="tip">
+              <label for="custom"><span>Custom</span>
+              </label>
+              <input type="number" name="customTip" value="0" class="custom-tip " id="customTip">
+
+            </div>
+          </div>
+          <div class="numberPeoples logo">
+            <label for="persons"> Number of people:</label>
+            <img src="./images/icon-person.svg" alt="icon-person" class=" icon-logo" />
+            <input type="number" name="persons" placeholder="0" />
           </div>
         </form>
-        <div class="results">
-          <div class="result-wrapper">
-            <label>Tip Amount</label>
-            <span>/person</span>
-            <div class="total-result">
-              <span class="icon-dollar">$</span>
+      </div>
 
-              <span class="tip">0.00</span>
-            </div>
-          </div>
-          <div class="result-wrapper">
-            <label>Total</label>
-            <span>/person</span>
-            <div class="total-result">
-              <div class="total-result">
-                <span class="icon-dollar">$</span>
-
-                <span class="tip">0.00</span>
-              </div>
-            </div>
-          </div>
-          <div class="reset">
-            <input type="button" value="RESET" class="reset-button" />
-          </div>
+      <div class="results">
+        <div class="tip-amount-label">
+          <label>Tip Amount</label>
+          <span>/person</span>
+        </div>
+        <div class="total-amount total-result">
+          <span class="icon-dollar">$</span>
+          <span class="tip">0.00</span>
+        </div>
+        <div class="person-label">
+          <label>Total</label>
+          <span>/person</span>
+        </div>
+        <div class="total-person total-result">
+          <span class="icon-dollar">$</span>
+          <span class="tip">0.00</span>
+        </div>
+        <div class="reset">
+          <input type="button" value="RESET" class="reset-button" />
         </div>
       </div>
     </div>
-  </body>
+  </div>
+</body>
+
 </html>
