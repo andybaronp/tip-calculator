@@ -23,24 +23,29 @@ body {
   height: 100vh;
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 1rem;
   justify-content: center;
   align-items: center;
+  align-content: center;
   background-color: var(--lightGrayishCyan);
+}
+
+.logo-spli {
+  width: 60px;
+  height: 60px;
 }
 .group {
   width: 70%;
-
   border-radius: 10px;
   display: grid;
   gap: 1rem;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  padding: 1.2rem;
+  padding: 1rem;
   background-color: var(--white);
 }
 .form {
   height: 100%;
-  padding: 1.2rem;
+
   color: var(--darkGrayishCyan);
   display: flex;
   flex-direction: column;
@@ -142,12 +147,12 @@ body {
 .results {
   width: 100%;
   border-radius: 10px;
-  padding: 2.2rem;
+  padding: 1.2rem;
   background-color: var(--veryDarkCyan);
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(4, 1fr);
-  grid-column-gap: 1rem;
+  grid-row-gap: 1.5rem;
 }
 .tip-amount-label {
   grid-area: 1 / 1 / 2 / 2;
@@ -185,22 +190,33 @@ body {
   font-weight: 700;
   color: var(--veryDarkCyan);
 }
+.reset-button:disabled {
+  background-color: #0d686d;
+  color: #00474b;
+}
 
 .results label {
   font-size: 1.1rem;
   color: #fff;
   font-weight: 700;
 }
-
+.results .person {
+  font-size: 1.1rem;
+  color: var(--darkGrayishCyan);
+  display: block;
+}
 .total-result {
   font-size: 2rem;
   font-weight: 800;
   color: var(--strongCyan);
   justify-self: flex-end;
 }
-@media screen and (max-width: 900px) {
+
+@media screen and (max-width: 720px) {
   .group {
     height: auto;
     width: auto;
   }
 }
+/*---------------------------------------------------------------------------------------------------- */
+/*---------------------------------------------------------------------------------------------------- */

@@ -11,11 +11,11 @@
 
 <body>
   <div class="container">
-    <div class="logo">
-      <img src="./images/logo.svg" alt="logo" />
+    <div>
+      <img src="./images/logo.svg" alt="logo" class="logo-spli" />
     </div>
     <div class="group">
-      <div class="form">
+      <div>
         <form class="form">
           <div class="bill-amount logo">
             <label for="bill">Bill Amount</label>
@@ -68,7 +68,7 @@
       <div class="results">
         <div class="tip-amount-label">
           <label>Tip Amount</label>
-          <span>/person</span>
+          <span class="person">/person</span>
         </div>
         <div class="total-amount total-result">
           <span class="icon-dollar">$</span>
@@ -76,14 +76,14 @@
         </div>
         <div class="person-label">
           <label>Total</label>
-          <span>/person</span>
+          <span class="person">/person</span>
         </div>
         <div class="total-person total-result">
           <span class="icon-dollar">$</span>
           <span class="tip">0.00</span>
         </div>
         <div class="reset">
-          <input type="button" value="RESET" class="reset-button" />
+          <input type="button" value="RESET" class="reset-button" disabled />
         </div>
       </div>
     </div>
