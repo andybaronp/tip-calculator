@@ -30,7 +30,7 @@ body {
 }
 .group {
   width: 70%;
-  height: 400px;
+
   border-radius: 10px;
   display: grid;
   gap: 1rem;
@@ -61,7 +61,65 @@ body {
   margin-left: 1rem;
 }
 
-.form input[type="number"] {
+/* -------------------------------------------------- */
+
+.radio-wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+  gap: 1rem;
+}
+.radio-wrapper input[type="radio"] {
+  opacity: 0;
+  position: fixed;
+  width: 0;
+}
+.radio-wrapper label {
+  width: 100%;
+  display: inline-block;
+  background: var(--veryDarkCyan);
+  padding: 0.8rem;
+  font-family: sans-serif, Arial;
+  font-size: 16px;
+  font-weight: 700;
+  border-radius: 7px;
+  color: var(--white);
+  border: 1px solid var(--veryDarkCyan);
+  text-align: center;
+}
+.radio-wrapper input[type="radio"]:checked + label {
+  color: var(--veryDarkCyan);
+  background-color: var(--lightCyan);
+  border-color: var(--lightCyan);
+}
+.radio-wrapper label:hover {
+  color: var(--veryDarkCyan);
+  background-color: var(--lightCyan);
+  border-color: var(--veryDarkCyan);
+}
+
+.custom input[type="radio"]:checked + label {
+  display: none;
+}
+.custom input[type="radio"]:checked ~ .custom-tip {
+  display: block;
+}
+
+.custom-tip {
+  display: none;
+  width: 100%;
+  height: 100%;
+  font-size: 20px;
+  border-radius: 7px;
+  text-align: right;
+  background-color: var(--lightGrayishCyan);
+  outline-color: var(--strongCyan);
+  border: 2px solid var(--strongCyan);
+  padding-right: 10px;
+}
+
+/* -------------------------------------------------- */
+
+.number {
   cursor: pointer;
   width: 100%;
   height: 38px;
@@ -75,54 +133,12 @@ body {
   margin-top: 3px;
   text-align: right;
 }
-.form input[type="number"]:hover {
+.number:hover {
   border: 2px solid var(--strongCyan);
 }
-.form input[type="radio"] {
-  margin: 8px;
-}
-.form input[type="radio"]::after {
-  content: "";
-  padding: 10px 50px;
-  background: var(--veryDarkCyan);
-  border-radius: 5px;
-  color: var(--white);
-}
+/* -------------------------------------------------- */
 
-.button-wrapper label {
-  font-weight: 700;
-  color: var(--white);
-}
-
-.form input[type="radio"]:checked::after {
-  background: var(--lightCyan);
-}
-.form input[type="radio"]:checked + label {
-  color: var(--veryDarkCyan);
-}
-.buttons-wrapper {
-  display: grid;
-  gap: 0.7rem;
-  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-}
-
-.button-wrapper-custom input[type="radio"]:checked + label span {
-  display: none;
-}
-.button-wrapper-custom input[type="radio"]:checked ~ .custom-tip {
-  display: block;
-}
-.custom-tip {
-  display: none;
-  width: 100%;
-  height: 100%;
-  padding: 1rem 0.5rem;
-  font-size: 20px;
-  border: 0;
-  text-align: right;
-  background-color: #f3f8fb;
-}
-
+/* Results */
 .results {
   width: 100%;
   border-radius: 10px;
