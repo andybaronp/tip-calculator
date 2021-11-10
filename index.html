@@ -16,11 +16,11 @@
     </div>
     <div class="group">
       <div>
-        <form class="form">
+        <form class="form" name="form">
           <div class="bill-amount logo">
             <label for="bill">Bill Amount</label>
             <img src="./images/icon-dollar.svg" alt="icon-dollar" class="icon-logo" />
-            <input type="number" id="bill" name="bill" placeholder="0.00" class="number" />
+            <input type="number" id="bill" name="bill" placeholder="0" class="number" min="0" />
           </div>
           <div class="tip">
             <label>Select Tip %</label>
@@ -60,7 +60,7 @@
           <div class="numberPeoples logo">
             <label for="persons"> Number of people:</label>
             <img src="./images/icon-person.svg" alt="icon-person" class=" icon-logo" />
-            <input type="number" name="persons" placeholder="0" class="number" />
+            <input type="number" name="persons" id="numbersPersons" placeholder="0" class="number" min="0" />
           </div>
         </form>
       </div>
@@ -72,7 +72,7 @@
         </div>
         <div class="total-amount total-result">
           <span class="icon-dollar">$</span>
-          <span class="tip">0.00</span>
+          <span class="tip" id="total-result">0.00</span>
         </div>
         <div class="person-label">
           <label>Total</label>
@@ -80,7 +80,7 @@
         </div>
         <div class="total-person total-result">
           <span class="icon-dollar">$</span>
-          <span class="tip">0.00</span>
+          <span class="tip" id=total>0.00</span>
         </div>
         <div class="reset">
           <input type="button" value="RESET" class="reset-button" disabled />
@@ -88,6 +88,7 @@
       </div>
     </div>
   </div>
+  <script src="app.js"></script>
 </body>
 
 </html>

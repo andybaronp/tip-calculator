@@ -84,7 +84,7 @@ body {
   background: var(--veryDarkCyan);
   padding: 0.8rem;
   font-family: sans-serif, Arial;
-  font-size: 16px;
+  font-size: 1.1rem;
   font-weight: 700;
   border-radius: 7px;
   color: var(--white);
@@ -113,7 +113,7 @@ body {
   display: none;
   width: 100%;
   height: 100%;
-  font-size: 20px;
+  font-size: 1.1rem;
   border-radius: 7px;
   text-align: right;
   background-color: var(--lightGrayishCyan);
@@ -131,7 +131,7 @@ body {
   border: 2px solid hsl(0, 0%, 100%);
   border-radius: 7px;
   padding: 0.5rem;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   color: var(--darkGrayishCyan);
   background-color: var(--lightGrayishCyan);
   outline-color: var(--strongCyan);
@@ -193,6 +193,7 @@ body {
 .reset-button:disabled {
   background-color: #0d686d;
   color: #00474b;
+  cursor: no-drop;
 }
 
 .results label {
