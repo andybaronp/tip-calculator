@@ -150,7 +150,6 @@ body {
   padding: 1.2rem;
   background-color: var(--veryDarkCyan);
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(4, 1fr);
   grid-row-gap: 1.5rem;
 }
@@ -212,11 +211,19 @@ body {
   color: var(--strongCyan);
   justify-self: flex-end;
 }
-
+.error {
+  color: rgba(255, 0, 0, 0.808);
+}
+.message {
+  opacity: 0;
+}
 @media screen and (max-width: 720px) {
   .group {
     height: auto;
     width: auto;
+  }
+  .total-result {
+    font-size: 1.7rem;
   }
 }
 /*---------------------------------------------------------------------------------------------------- */
