@@ -60,7 +60,7 @@ body {
 .icon-logo {
   position: absolute;
   left: 0;
-  top: 30px;
+  top: 33px;
   display: flex;
   align-items: center;
   margin-left: 1rem;
@@ -211,12 +211,29 @@ body {
   color: var(--strongCyan);
   justify-self: flex-end;
 }
+
 .error {
   color: rgba(255, 0, 0, 0.808);
-}
-.message {
+  font-weight: 700;
   opacity: 0;
+  visibility: hidden;
+  margin-left: 15px;
 }
+
+@keyframes fade {
+  from {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: all;
+  }
+
+  to {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+  }
+}
+
 @media screen and (max-width: 720px) {
   .group {
     height: auto;

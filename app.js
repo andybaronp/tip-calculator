@@ -65,6 +65,8 @@ const calculate = () => {
     return;
   }
   let subTip = (billValue * tip) / 100;
+  if (isNaN(subTip)) return;
+
   totalBill = subTip / totalPersons;
 
   totalBill = totalBill.toFixed(2);
@@ -97,8 +99,6 @@ btnReset.addEventListener("click", resetBtn);
 const showError = (element) => {
   element.classList.add("error");
   element.style.opacity = 1;
-
-  setTimeout(() => {
-    element.style.opacity = 0;
-  }, 3500);
+  element.style.visibility = "visible";
+  element.style.animation = "fade 10s ease forwards";
 };
